@@ -2,7 +2,7 @@ const {Command, flags} = require('@oclif/command')
 
 class DeployCommand extends Command {
   async run() {
-  
+  }
 }
 
 DeployCommand.description = `Deploy a lambda to the Evervault network

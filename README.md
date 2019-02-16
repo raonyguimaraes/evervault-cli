@@ -30,6 +30,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`evervault help [COMMAND]`](#evervault-help-command)
+* [`evervault lambda:deploy`](#evervault-lambdadeploy)
 * [`evervault lambda:list`](#evervault-lambdalist)
 * [`evervault lambda:remove`](#evervault-lambdaremove)
 * [`evervault login`](#evervault-login)
@@ -50,6 +51,21 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
+
+## `evervault lambda:deploy`
+
+Deploy a lambda to the Evervault network
+
+```
+USAGE
+  $ evervault lambda:deploy
+
+DESCRIPTION
+  ...
+  Provide the filename as a parameter and the command will return a unique ID and access URL to run your lambda
+```
+
+_See code: [src/commands/lambda/deploy.js](https://github.com/evervault/evervault-cli/blob/v0.0.1/src/commands/lambda/deploy.js)_
 
 ## `evervault lambda:list`
 
