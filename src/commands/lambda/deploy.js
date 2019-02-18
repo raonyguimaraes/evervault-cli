@@ -31,7 +31,7 @@ class DeployCommand extends Command {
 					if (err) throw err;
 
 					if (body.hash) {
-						console.log("Your lambda has successfully been deployed. Access it at https://api.evervault.com/lambdas/run/" + body.hash);
+						console.log("Your lambda has successfully been deployed. Access it at https://api.evervault.com/lambdas/run/" + body._id);
 					} else {
 						console.error("There was an error deploying your lambda")
 					}
