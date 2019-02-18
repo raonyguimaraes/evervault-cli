@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
-require('@oclif/command').run()
+require('dotenv').config();
+
+let oclif = require('@oclif/command')
+oclif.Command.base_url = "http://localhost:4000"
+
+oclif.run()
 .then(require('@oclif/command/flush'))
 .catch(require('@oclif/errors/handle'))
