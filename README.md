@@ -1,7 +1,7 @@
 evervault-cli
 =============
 
-CLI interface for managing Evervault Lambdas
+CLI interface for managing evervault lambdas
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/evervault-cli.svg)](https://npmjs.org/package/evervault-cli)
@@ -54,7 +54,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6
 
 ## `evervault lambda:deploy FILE`
 
-Deploy a lambda to the Evervault network
+Deploy a lambda to the evervault network
 
 ```
 USAGE
@@ -72,7 +72,7 @@ _See code: [src/commands/lambda/deploy.js](https://github.com/evervault/evervaul
 
 ## `evervault lambda:list`
 
-List the Evervault Lambdas you have deployed
+List the evervault Lambdas you have deployed
 
 ```
 USAGE
@@ -85,27 +85,9 @@ DESCRIPTION
 
 _See code: [src/commands/lambda/list.js](https://github.com/evervault/evervault-cli/blob/v0.0.4/src/commands/lambda/list.js)_
 
-## `evervault lambda:remove`
-
-Describe the command here
-
-```
-USAGE
-  $ evervault lambda:remove
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/lambda/remove.js](https://github.com/evervault/evervault-cli/blob/v0.0.4/src/commands/lambda/remove.js)_
-
 ## `evervault login`
 
-Authenticate with your Evervault Account to retrieve your API keys
+Authenticate with your evervault Account to retrieve your API keys
 
 ```
 USAGE
@@ -113,7 +95,7 @@ USAGE
 
 DESCRIPTION
   ...
-  Use your Evervault email and password to generate a JWT auth token
+  Use your evervault email and password to generate a Bearer auth token
 ```
 
 _See code: [src/commands/login.js](https://github.com/evervault/evervault-cli/blob/v0.0.4/src/commands/login.js)_
