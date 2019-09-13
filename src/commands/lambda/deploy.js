@@ -47,7 +47,7 @@ class DeployCommand extends Command {
             var checkBuild = setInterval(function () {
               // check if the lambda has been built yet
               request({
-      			    url: config.api.base_url + "/lambdas/" + body.id,
+      			    url: config.api.base_url + "/lambdas/" + body.name,
       			    method: "GET",
       					headers: {
       						Authorization: "Bearer " + config.api.token
