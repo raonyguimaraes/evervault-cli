@@ -20,7 +20,7 @@ $ npm install -g evervault-cli
 $ evervault COMMAND
 running command...
 $ evervault (-v|--version|version)
-evervault-cli/0.1.1 darwin-x64 node-v12.9.1
+evervault-cli/0.1.2 darwin-x64 node-v12.9.1
 $ evervault --help [COMMAND]
 USAGE
   $ evervault COMMAND
@@ -67,7 +67,7 @@ DESCRIPTION
   Provide the filename as a parameter and the command will return a unique ID and access URL to run your lambda
 ```
 
-_See code: [src/commands/lambda/deploy.js](https://github.com/evervault/evervault-cli/blob/v0.1.1/src/commands/lambda/deploy.js)_
+_See code: [src/commands/lambda/deploy.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/lambda/deploy.js)_
 
 ## `evervault lambda:list`
 
@@ -82,7 +82,7 @@ DESCRIPTION
   Returns a list of all the deployed lambdas including their hashes and access URLs
 ```
 
-_See code: [src/commands/lambda/list.js](https://github.com/evervault/evervault-cli/blob/v0.1.1/src/commands/lambda/list.js)_
+_See code: [src/commands/lambda/list.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/lambda/list.js)_
 
 ## `evervault login`
 
@@ -97,5 +97,5 @@ DESCRIPTION
   Use your evervault email and password to generate a Bearer auth token
 ```
 
-_See code: [src/commands/login.js](https://github.com/evervault/evervault-cli/blob/v0.1.1/src/commands/login.js)_
+_See code: [src/commands/login.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/login.js)_
 <!-- commandsstop -->

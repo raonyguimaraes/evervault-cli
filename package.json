@@ -1,7 +1,7 @@
 {
   "name": "evervault-cli",
   "description": "CLI interface for managing Evervault Lambdas",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Shane Curran",
   "bin": {
     "evervault": "./bin/run"
