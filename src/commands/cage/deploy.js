@@ -12,7 +12,7 @@ class DeployCommand extends Command {
   async run() {
 		const {args} = this.parse(DeployCommand);
 
-    cli.action.start('Loading your lambda')
+    cli.action.start('Loading your cage')
 		fs.readFile(args.file, function (err, data) {
 			if (err) throw err;
       cli.action.stop(logSymbols.success)
@@ -22,7 +22,7 @@ class DeployCommand extends Command {
         cli.action.stop(logSymbols.success)
         cli.action.start('Submitting request to evervault API')
 				request({
-			    url: config.api.base_url + "/lambdas",
+			    url: config.api.base_url + "/cages",
 			    method: "POST",
 					headers: {
 						Authorization: "Bearer " + config.api.token
@@ -30,9 +30,7 @@ class DeployCommand extends Command {
 			    json: {
 						metadata: {
 							framework: "nodejs",
-							libraries: [
-								"request"
-							]
+							libraries: []
 						},
 						source: data.toString()
 					}
@@ -42,46 +40,47 @@ class DeployCommand extends Command {
           cli.action.stop(logSymbols.success)
 
           if (body.name) {
-            cli.action.start("Waiting for lambda " + chalk.bold(body.name) + " to build")
+            cli.action.start("Waiting for cage " + chalk.bold(body.name) + " to build")
 
             var checkBuild = setInterval(function () {
-              // check if the lambda has been built yet
+              // check if the cage has been built yet
               request({
-      			    url: config.api.base_url + "/lambdas/" + body.name,
+      			    url: config.api.base_url + "/cages/" + body.name,
       			    method: "GET",
       					headers: {
       						Authorization: "Bearer " + config.api.token
       					}
       				}, function (err, head, body) {
+                console.log(body);
                 body = JSON.parse(body)
                 if (body.status === "deployed") {
                   cli.action.stop(logSymbols.success);
-                  console.log("Lambda successfully deployed! " + logSymbols.success)
+                  console.log("Cage successfully deployed! " + logSymbols.success)
                   clearInterval(checkBuild);
                   console.log()
-                  console.log("You can access your new lambda at " + body.url)
+                  console.log("You can access your new cage at " + body.url)
                 }
               });
             }, 1000);
           } else {
-            console.error("There was an error submitting your lambda")
+            console.error("There was an error submitting your cage")
           }
 					// if (body.hash) {
-					// 	console.log("Your lambda has successfully been deployed. Access it at https://e/" + body._id);
+					// 	console.log("Your cage has successfully been deployed. Access it at https://e/" + body._id);
 					// } else {
-					// 	console.error("There was an error deploying your lambda")
+					// 	console.error("There was an error deploying your cage")
 					// }
 				})
 			} else {
-				console.error("Please login using `evervault login` before deploying a lambda");
+				console.error("Please login using `evervault login` before deploying a cage");
 			}
 		});
   }
 }
 
-DeployCommand.description = `Deploy a lambda to the evervault network
+DeployCommand.description = `Deploy a cage to the evervault network
 ...
-Provide the filename as a parameter and the command will return a unique ID and access URL to run your lambda
+Provide the filename as a parameter and the command will return a unique ID and access URL to run your cage
 `
 DeployCommand.args = [
   {

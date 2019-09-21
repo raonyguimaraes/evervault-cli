@@ -7,9 +7,9 @@ const chalk = require('chalk')
 
 class ListCommand extends Command {
   async run() {
-    cli.action.start('Retrieving lambda list');
+    cli.action.start('Retrieving cage list');
 		request({
-			url: config.api.base_url + "/lambdas",
+			url: config.api.base_url + "/cages",
 			method: "GET",
 			headers: {
 				Authorization: "Bearer " + config.api.token
@@ -20,11 +20,11 @@ class ListCommand extends Command {
 			if (body.count && body.count > 0) {
         cli.table(body.rows, {
           name: {
-            header: "Lambda Name",
+            header: "Cage Name",
             minWidth: 7
           },
           url: {
-            header: "Lambda URL",
+            header: "Cage URL",
             get: row => chalk.underline(row.url)
           },
           status: {
@@ -37,15 +37,15 @@ class ListCommand extends Command {
         })
         cli.action.stop()
 			} else {
-				console.log("No lambdas found");
+				console.log("No cages found");
 			}
 		});
   }
 }
 
-ListCommand.description = `List the evervault lambdas you have deployed
+ListCommand.description = `List the evervault cages you have deployed
 ...
-Returns a list of all the deployed lambdas including their hashes and access URLs
+Returns a list of all the deployed cages including their hashes and access URLs
 `
 
 module.exports = ListCommand

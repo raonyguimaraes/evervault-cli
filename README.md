@@ -1,7 +1,7 @@
 evervault-cli
 =============
 
-CLI interface for managing evervault lambdas
+CLI interface for managing evervault cages
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/evervault-cli.svg)](https://npmjs.org/package/evervault-cli)
@@ -20,7 +20,7 @@ $ npm install -g evervault-cli
 $ evervault COMMAND
 running command...
 $ evervault (-v|--version|version)
-evervault-cli/0.1.2 darwin-x64 node-v12.9.1
+evervault-cli/0.1.3 darwin-x64 node-v12.9.1
 $ evervault --help [COMMAND]
 USAGE
   $ evervault COMMAND
@@ -30,8 +30,8 @@ USAGE
 # Commands
 <!-- commands -->
 * [`evervault help [COMMAND]`](#evervault-help-command)
-* [`evervault lambda:deploy FILE`](#evervault-lambdadeploy-file)
-* [`evervault lambda:list`](#evervault-lambdalist)
+* [`evervault cage:deploy FILE`](#evervault-cagedeploy-file)
+* [`evervault cage:list`](#evervault-cagelist)
 * [`evervault login`](#evervault-login)
 
 ## `evervault help [COMMAND]`
@@ -51,38 +51,38 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `evervault lambda:deploy FILE`
+## `evervault cage:deploy FILE`
 
-Deploy a lambda to the evervault network
+Deploy a cage to the evervault network
 
 ```
 USAGE
-  $ evervault lambda:deploy FILE
+  $ evervault cage:deploy FILE
 
 ARGUMENTS
   FILE  file name to deploy
 
 DESCRIPTION
   ...
-  Provide the filename as a parameter and the command will return a unique ID and access URL to run your lambda
+  Provide the filename as a parameter and the command will return a unique ID and access URL to run your cage
 ```
 
-_See code: [src/commands/lambda/deploy.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/lambda/deploy.js)_
+_See code: [src/commands/cage/deploy.js](https://github.com/evervault/evervault-cli/blob/v0.1.3/src/commands/cage/deploy.js)_
 
-## `evervault lambda:list`
+## `evervault cage:list`
 
-List the evervault lambdas you have deployed
+List the evervault cages you have deployed
 
 ```
 USAGE
-  $ evervault lambda:list
+  $ evervault cage:list
 
 DESCRIPTION
   ...
-  Returns a list of all the deployed lambdas including their hashes and access URLs
+  Returns a list of all the deployed cages including their hashes and access URLs
 ```
 
-_See code: [src/commands/lambda/list.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/lambda/list.js)_
+_See code: [src/commands/cage/list.js](https://github.com/evervault/evervault-cli/blob/v0.1.3/src/commands/cage/list.js)_
 
 ## `evervault login`
 
@@ -97,5 +97,5 @@ DESCRIPTION
   Use your evervault email and password to generate a Bearer auth token
 ```
 
-_See code: [src/commands/login.js](https://github.com/evervault/evervault-cli/blob/v0.1.2/src/commands/login.js)_
+_See code: [src/commands/login.js](https://github.com/evervault/evervault-cli/blob/v0.1.3/src/commands/login.js)_
 <!-- commandsstop -->
