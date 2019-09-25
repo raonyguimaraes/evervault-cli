@@ -51,7 +51,6 @@ class DeployCommand extends Command {
       						Authorization: "Bearer " + config.api.token
       					}
       				}, function (err, head, body) {
-                console.log(body);
                 body = JSON.parse(body)
                 if (body.status === "deployed") {
                   cli.action.stop(logSymbols.success);

@@ -1,7 +1,7 @@
 {
   "name": "evervault-cli",
   "description": "CLI interface for managing Evervault Cages",
-  "version": "0.1.3",
+  "version": "1.0.2",
   "author": "Shane Curran",
   "bin": {
     "evervault": "./bin/run"
